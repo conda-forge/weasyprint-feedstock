@@ -16,7 +16,7 @@ build:
 
 requirements:
   host:
-    - python >3.5
+    - python
     - pip
     - pango
     - setuptools >=39.2.0
@@ -32,7 +32,7 @@ requirements:
     - xorg-libxext
     
   run:
-    - python >3.5
+    - python
     - pango
     - setuptools >=39.2.0
     - cffi >=0.6
