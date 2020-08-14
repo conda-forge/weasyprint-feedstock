@@ -13,3 +13,10 @@ pango:
 pin_run_as_build:
   pango:
     max_pin: x.x
+  python:
+    min_pin: x.x
+    max_pin: x.x
+python:
+- 3.6.* *_cpython
+target_platform:
+- osx-64
