@@ -1,5 +1,5 @@
 {% set name = "WeasyPrint" %}
-{% set version = "51" %}
+{% set version = "52" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://github.com/Kozea/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 9dd175bc8f22882a9d2293241416d4ca906ed2a15a98cebbc877026f8930dd98
+  sha256: a59be1bd04fd30d54319f34c398d51696b6dd574926c223fe0fee16af94c080b
 
 build:
-  number: 2
+  number: 0
   skip: true  # [win]
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -30,7 +30,7 @@ requirements:
     - pytest-runner
     - xorg-libxrender
     - xorg-libxext
-    
+
   run:
     - python
     - pango
@@ -54,7 +54,7 @@ about:
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
-  summary: 'WeasyPrint converts web documents (HTML with CSS, SVG, …) to PDF'
+  summary: WeasyPrint converts web documents (HTML with CSS, SVG, …) to PDF
 
   description: |
     WeasyPrint is a smart solution helping web developers to create PDF
