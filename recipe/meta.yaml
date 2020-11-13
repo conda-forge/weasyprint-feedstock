@@ -27,6 +27,7 @@ requirements:
     - cssselect2 >=0.1
     - cairosvg >=2.4.0
     - pyphen >=0.8
+    - pillow >=4.0.0
     - pytest-runner
     - xorg-libxrender
     - xorg-libxext
@@ -42,6 +43,7 @@ requirements:
     - cssselect2 >=0.1
     - cairosvg >=2.4.0
     - pyphen >=0.8
+    - pillow >=4.0.0
     - xorg-libxrender
     - xorg-libxext
 
