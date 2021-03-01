@@ -22,13 +22,15 @@ requirements:
     - pytest-runner
     - python >=3.6
   run:
+    - cairo >=1.15.4
     - cairocffi >=0.9.0
     - cairosvg >=2.4.0
     - cffi >=0.6
     - cssselect2 >=0.1
+    - gdk-pixbuf >=2.25.0
     - html5lib >=0.999999999
     - pillow >=4.0.0
-    - pango
+    - pango >=1.38.0
     - pyphen >=0.9.1
     - python >=3.6
     - setuptools >=39.2.0
