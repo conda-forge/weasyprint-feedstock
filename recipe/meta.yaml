@@ -1,5 +1,5 @@
 {% set name = "WeasyPrint" %}
-{% set version = "52.2" %}
+{% set version = "52.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/Kozea/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 3889680cc10bd167e5b31e21159730e40ed7bc77239e2ca22d80dcbe77596c52
+  sha256: 122482f22b084cea62cdcd83f9a78487a49e106fabe0016a63f765b2d27265a5
 
 build:
   number: 0
