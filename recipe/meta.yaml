@@ -42,8 +42,12 @@ test:
   commands:
     - pip check
     - weasyprint --help
+    - pytest
   requires:
     - pip
+    - pytest
+  source_files:
+    - weasyprint
 
 about:
   home: https://github.com/Kozea/WeasyPrint
