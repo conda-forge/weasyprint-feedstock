@@ -10,7 +10,7 @@ source:
   sha256: 6571d36661e8d8c2bc4baf6347700284ac00e6c4ebbcdcad2ea68c074ce6325b
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - weasyprint = weasyprint.__main__:main
