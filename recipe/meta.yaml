@@ -35,6 +35,7 @@ requirements:
     - python >=3.6
     - setuptools >=39.2.0
     - tinycss2 >=1.0.0
+    - glib  # Temporary, see https://github.com/conda-forge/weasyprint-feedstock/issues/23
 
 test:
   imports:
