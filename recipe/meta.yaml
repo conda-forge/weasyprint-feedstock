@@ -18,8 +18,8 @@ build:
 
 requirements:
   host:
+    - flit-core >=3.2
     - pip
-    - pytest-runner
     - python >=3.6
   run:
     - cffi >=0.6
