@@ -6,15 +6,15 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/Kozea/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: c92ab9bded3c1864192d947efa4514e53134dbad18f4cdf822e5858a1328ee98
+  url: https://files.pythonhosted.org/packages/py3/{{ (name|lower)[0] }}/{{ name|lower }}/{{ name|lower }}-{{ version }}-py3-none-any.whl
+  sha256: fe555d7cbd694c4a8ad23f6e3682bbaf9d43ab7250338a0091d104d00ed5902f
 
 build:
   number: 0
   noarch: python
   entry_points:
     - weasyprint = weasyprint.__main__:main
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install {{ name|lower }}-{{ version }}-py3-none-any.whl -vv
 
 requirements:
   host:
@@ -46,7 +46,7 @@ about:
   home: https://github.com/Kozea/WeasyPrint
   license: BSD-3-Clause
   license_family: BSD
-  license_file: LICENSE
+  license_file: {{ name|lower }}-{{ version }}.dist-info/LICENSE
   summary: WeasyPrint converts web documents (HTML with CSS, SVG, …) to PDF
 
   description: |
