@@ -1,39 +1,35 @@
 {% set name = "WeasyPrint" %}
-{% set version = "52.5" %}
+{% set version = "53.1" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/Kozea/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 6571d36661e8d8c2bc4baf6347700284ac00e6c4ebbcdcad2ea68c074ce6325b
+  url: https://files.pythonhosted.org/packages/py3/{{ (name|lower)[0] }}/{{ name|lower }}/{{ name|lower }}-{{ version }}-py3-none-any.whl
+  sha256: fe555d7cbd694c4a8ad23f6e3682bbaf9d43ab7250338a0091d104d00ed5902f
 
 build:
-  number: 1
+  number: 0
   noarch: python
   entry_points:
     - weasyprint = weasyprint.__main__:main
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install {{ name|lower }}-{{ version }}-py3-none-any.whl -vv
 
 requirements:
   host:
     - pip
-    - pytest-runner
     - python >=3.6
   run:
-    - cairo >=1.15.4
-    - cairocffi >=0.9.0
-    - cairosvg >=2.4.0
     - cffi >=0.6
     - cssselect2 >=0.1
-    - gdk-pixbuf >=2.25.0
-    - html5lib >=0.999999999
+    - fonttools >=4.0.0
+    - html5lib >=1.0.1
+    - pango >=1.44.0
     - pillow >=4.0.0
-    - pango >=1.38.0
+    - pydyf >=0.0.3
     - pyphen >=0.9.1
     - python >=3.6
-    - setuptools >=39.2.0
     - tinycss2 >=1.0.0
     - glib  # Temporary, see https://github.com/conda-forge/weasyprint-feedstock/issues/23
 
@@ -50,7 +46,7 @@ about:
   home: https://github.com/Kozea/WeasyPrint
   license: BSD-3-Clause
   license_family: BSD
-  license_file: LICENSE
+  license_file: {{ name|lower }}-{{ version }}.dist-info/LICENSE
   summary: WeasyPrint converts web documents (HTML with CSS, SVG, …) to PDF
 
   description: |
