@@ -27,9 +27,9 @@ requirements:
     - html5lib >=1.0.1
     - pango >=1.44.0
     - pillow >=4.0.0
-    - pydyf >=0.0.3
+    - pydyf >=0.2.0
     - pyphen >=0.9.1
-    - python >=3.6
+    - python >=3.7
     - tinycss2 >=1.0.0
     - glib  # Temporary, see https://github.com/conda-forge/weasyprint-feedstock/issues/23
 
