@@ -1,5 +1,5 @@
 {% set name = "WeasyPrint" %}
-{% set version = "55.0" %}
+{% set version = "56.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/py3/{{ (name|lower)[0] }}/{{ name|lower }}/{{ name|lower }}-{{ version }}-py3-none-any.whl
-  sha256: 6a5008b3e1152498f206b2d0791b3e161f507607e31ca42b307cb31b49795462
+  sha256: 2c3601639a9554505465deec858e8cd6bcd1b359080afbfe02f83245b3341963
 
 build:
   number: 0
@@ -27,9 +27,9 @@ requirements:
     - html5lib >=1.0.1
     - pango >=1.44.0
     - pillow >=4.0.0
-    - pydyf >=0.0.3
+    - pydyf >=0.2.0
     - pyphen >=0.9.1
-    - python >=3.6
+    - python >=3.7
     - tinycss2 >=1.0.0
     - glib  # Temporary, see https://github.com/conda-forge/weasyprint-feedstock/issues/23
 
