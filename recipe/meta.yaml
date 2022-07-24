@@ -1,5 +1,5 @@
 {% set name = "WeasyPrint" %}
-{% set version = "56.0" %}
+{% set version = "56.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/py3/{{ (name|lower)[0] }}/{{ name|lower }}/{{ name|lower }}-{{ version }}-py3-none-any.whl
-  sha256: 2c3601639a9554505465deec858e8cd6bcd1b359080afbfe02f83245b3341963
+  sha256: 86ffa626a7b335d19a7024c0b59a6b3160fd5c0e7a3634500f50a2c35faeafb5
 
 build:
   number: 0
