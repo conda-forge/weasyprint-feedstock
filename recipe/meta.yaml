@@ -1,5 +1,5 @@
 {% set name = "WeasyPrint" %}
-{% set version = "56.1" %}
+{% set version = "57.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/py3/{{ (name|lower)[0] }}/{{ name|lower }}/{{ name|lower }}-{{ version }}-py3-none-any.whl
-  sha256: 86ffa626a7b335d19a7024c0b59a6b3160fd5c0e7a3634500f50a2c35faeafb5
+  sha256: c714681139a765964c3a8514ac1fc0f65ae063aada4aad752085575f2129e765
 
 build:
   number: 0
@@ -27,7 +27,7 @@ requirements:
     - html5lib >=1.0.1
     - pango >=1.44.0
     - pillow >=4.0.0
-    - pydyf >=0.2.0
+    - pydyf >=0.5.0
     - pyphen >=0.9.1
     - python >=3.7
     - tinycss2 >=1.0.0
