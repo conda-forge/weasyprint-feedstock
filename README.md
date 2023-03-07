@@ -1,11 +1,11 @@
-About weasyprint
-================
+About weasyprint-feedstock
+==========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/weasyprint-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/Kozea/WeasyPrint
 
 Package license: BSD-3-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/weasyprint-feedstock/blob/main/LICENSE.txt)
 
 Summary: WeasyPrint converts web documents (HTML with CSS, SVG, …) to PDF
 
