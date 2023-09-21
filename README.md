@@ -11,7 +11,7 @@ Summary: WeasyPrint converts web documents (HTML with CSS, SVG, …) to PDF
 
 Development: https://github.com/Kozea/WeasyPrint
 
-Documentation: https://weasyprint.readthedocs.io/en/stable/
+Documentation: https://doc.courtbouillon.org/weasyprint/stable/
 
 WeasyPrint is a smart solution helping web developers to create PDF
 documents. It turns simple HTML pages into gorgeous statistical

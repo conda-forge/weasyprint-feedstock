@@ -54,7 +54,7 @@ about:
     documents. It turns simple HTML pages into gorgeous statistical
     reports, invoices, tickets…
 
-  doc_url: https://weasyprint.readthedocs.io/en/stable/
+  doc_url: https://doc.courtbouillon.org/weasyprint/stable/
   dev_url: https://github.com/Kozea/WeasyPrint
 
 extra:
