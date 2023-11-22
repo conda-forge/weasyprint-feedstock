@@ -10,7 +10,7 @@ source:
   sha256: 55227e5e44f5f34bc9cec651329bd38d063ef7d29151d4b058d4af1ca943d4a7
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - weasyprint = weasyprint.__main__:main
@@ -32,6 +32,7 @@ requirements:
     - python >=3.7
     - tinycss2 >=1.0.0
     - glib  # Temporary, see https://github.com/conda-forge/weasyprint-feedstock/issues/23
+    - gtk3  # [win]
 
 test:
   imports:
