@@ -11,6 +11,7 @@ source:
 
 build:
   number: 1
+  skip: True  # [py<37]
   entry_points:
     - weasyprint = weasyprint.__main__:main
   script: {{ PYTHON }} -m pip install {{ name|lower }}-{{ version }}-py3-none-any.whl -vv
@@ -28,7 +29,7 @@ requirements:
     - pillow >=9.1.0
     - pydyf >=0.8.0
     - pyphen >=0.9.1
-    - python >=3.7
+    - python
     - tinycss2 >=1.0.0
     - glib  # Temporary, see https://github.com/conda-forge/weasyprint-feedstock/issues/23
     - gtk3  # [win]
