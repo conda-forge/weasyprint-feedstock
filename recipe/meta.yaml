@@ -19,7 +19,7 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python
   run:
     - cffi >=0.6
     - cssselect2 >=0.1
