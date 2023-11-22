@@ -11,7 +11,6 @@ source:
 
 build:
   number: 1
-  noarch: python
   entry_points:
     - weasyprint = weasyprint.__main__:main
   script: {{ PYTHON }} -m pip install {{ name|lower }}-{{ version }}-py3-none-any.whl -vv
