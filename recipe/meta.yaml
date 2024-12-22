@@ -10,7 +10,7 @@ source:
   sha256: d31048646ce15084e135b33e334a61f526aa68d2f679fcc109ed0e0f5edaed21
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - weasyprint = weasyprint.__main__:main
@@ -19,7 +19,7 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.9
+    - python {{ python_min }}
   run:
     - cffi >=0.6
     - cssselect2 >=0.1
@@ -29,7 +29,7 @@ requirements:
     - pillow >=9.1.0
     - pydyf >=0.10.0
     - pyphen >=0.9.1
-    - python >=3.7
+    - python >={{ python_min }}
     - tinycss2 >=1.3.0
     - glib  # Temporary, see https://github.com/conda-forge/weasyprint-feedstock/issues/23
 
@@ -41,6 +41,7 @@ test:
     - weasyprint --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/Kozea/WeasyPrint
