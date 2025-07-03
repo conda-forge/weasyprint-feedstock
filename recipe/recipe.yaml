@@ -36,6 +36,10 @@ requirements:
     - pyphen >=0.9.1
     - pillow >=9.1.0
     - fonttools >=4.0.0
+    # OSError: cannot load library 'libpango-1.0-0':
+    - pango >=1.44.0
+    #- html5lib >=1.1
+    - glib  # Temporary, see https://github.com/conda-forge/weasyprint-feedstock/issues/23
 
 tests:
   - python:
