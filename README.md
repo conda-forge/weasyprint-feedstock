@@ -7,7 +7,7 @@ Home: https://github.com/Kozea/WeasyPrint
 
 Package license: BSD-3-Clause
 
-Summary: WeasyPrint converts web documents (HTML with CSS, SVG, …) to PDF
+Summary: WeasyPrint converts web documents (HTML with CSS, SVG, etc.) to PDF
 
 Development: https://github.com/Kozea/WeasyPrint
 
@@ -15,8 +15,7 @@ Documentation: https://doc.courtbouillon.org/weasyprint/stable/
 
 WeasyPrint is a smart solution helping web developers to create PDF
 documents. It turns simple HTML pages into gorgeous statistical
-reports, invoices, tickets…
-
+reports, invoices, tickets, etc.
 
 Current build status
 ====================
@@ -154,4 +153,5 @@ Feedstock Maintainers
 
 * [@liZe](https://github.com/liZe/)
 * [@mrandrewandrade](https://github.com/mrandrewandrade/)
+* [@rxm7706](https://github.com/rxm7706/)
 
