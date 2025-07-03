@@ -4,3 +4,10 @@ github:
   tooling_branch_name: main
 conda_build:
   pkg_format: '2'
+bot:
+  automerge: true
+  inspection: update-all
+  check_solvable: true
+  run_deps_from_wheel: true
+conda_install_tool: pixi
+conda_build_tool: rattler-build
