@@ -1,0 +1,67 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/prefix-dev/recipe-format/main/schema.json
+schema_version: 1
+
+context:
+  name: weasyprint
+  version: "65.1"
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/weasyprint-${{ version }}.tar.gz
+  sha256: 120281bdbd42ffaa7d7e5cedbe3182a2cef36ea5ad97fe9f357e43be6a1e58ea
+
+build:
+  number: 0
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  python:
+    entry_points:
+      - weasyprint = weasyprint.__main__:main
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - flit-core >=3.2,<4
+    - pip
+  run:
+    - python >=${{ python_min }},<4.0
+    - pydyf >=0.11.0
+    - cffi >=0.6
+    - tinyhtml5 >=2.0.0b1
+    - tinycss2 >=1.4.0
+    - cssselect2 >=0.8.0
+    - pyphen >=0.9.1
+    - pillow >=9.1.0
+    - fonttools >=4.0.0
+
+tests:
+  - python:
+      imports:
+        - weasyprint
+  - requirements:
+      run:
+        - python ${{ python_min }}.*
+    script:
+      - weasyprint --help
+      - pip check
+
+about:
+  summary: WeasyPrint converts web documents (HTML with CSS, SVG, etc.) to PDF
+  homepage: https://github.com/Kozea/WeasyPrint
+  description: |
+    WeasyPrint is a smart solution helping web developers to create PDF
+    documents. It turns simple HTML pages into gorgeous statistical
+    reports, invoices, tickets, etc.
+  repository: https://github.com/Kozea/WeasyPrint
+  documentation: https://doc.courtbouillon.org/weasyprint/stable/
+  license: BSD-3-Clause
+  license_file: LICENSE
+
+extra:
+  recipe-maintainers:
+    - liZe
+    - mrandrewandrade
+    - rxm7706
