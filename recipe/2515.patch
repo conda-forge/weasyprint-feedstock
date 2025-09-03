@@ -1,0 +1,23 @@
+From bbd59652deaaeda9e20f6985a06ce5ec9c7f9c95 Mon Sep 17 00:00:00 2001
+From: Guillaume Ayoub <guillaume@courtbouillon.org>
+Date: Tue, 29 Jul 2025 19:12:16 +0200
+Subject: [PATCH] Fix libgobject filename on macOS
+
+Fix #2512.
+---
+ weasyprint/text/ffi.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/weasyprint/text/ffi.py b/weasyprint/text/ffi.py
+index 3c5061aeb..d5fd3221d 100644
+--- a/weasyprint/text/ffi.py
++++ b/weasyprint/text/ffi.py
+@@ -474,7 +474,7 @@ def _dlopen(ffi, *names, allow_fail=False):
+ 
+ gobject = _dlopen(
+     ffi, 'libgobject-2.0-0', 'gobject-2.0-0', 'gobject-2.0',
+-    'libgobject-2.0.so.0', 'libgobject-2.0.dylib', 'libgobject-2.0-0.dll')
++    'libgobject-2.0.so.0', 'libgobject-2.0.0.dylib', 'libgobject-2.0-0.dll')
+ pango = _dlopen(
+     ffi, 'libpango-1.0-0', 'pango-1.0-0', 'pango-1.0', 'libpango-1.0.so.0',
+     'libpango-1.0.dylib', 'libpango-1.0-0.dll')
