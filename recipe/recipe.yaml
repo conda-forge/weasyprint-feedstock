@@ -3,15 +3,15 @@ schema_version: 1
 
 context:
   name: weasyprint
-  version: "65.1"
+  version: "66"
 
 package:
   name: ${{ name|lower }}
   version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/weasyprint-${{ version }}.tar.gz
-  sha256: 120281bdbd42ffaa7d7e5cedbe3182a2cef36ea5ad97fe9f357e43be6a1e58ea
+  url: https://files.pythonhosted.org/packages/32/99/480b5430b7eb0916e7d5df1bee7d9508b28b48fee28da894d0a050e0e930/weasyprint-66.0.tar.gz
+  sha256: da71dc87dc129ac9cffdc65e5477e90365ab9dbae45c744014ec1d06303dde40
 
 build:
   number: 0
