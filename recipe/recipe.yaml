@@ -12,6 +12,8 @@ package:
 source:
   url: https://files.pythonhosted.org/packages/32/99/480b5430b7eb0916e7d5df1bee7d9508b28b48fee28da894d0a050e0e930/weasyprint-66.0.tar.gz
   sha256: da71dc87dc129ac9cffdc65e5477e90365ab9dbae45c744014ec1d06303dde40
+  patches:
+    - 2515.patch  # https://github.com/Kozea/WeasyPrint/pull/2515
 
 build:
   number: 0
