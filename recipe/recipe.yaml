@@ -10,10 +10,8 @@ package:
   version: ${{ version }}
 
 source:
-  url: https://files.pythonhosted.org/packages/fd/bc/79a65b3a406cb62a1982fec8b49134b25a3b31abb094ca493c9fddff5492/weasyprint-${{ version }}.tar.gz
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/weasyprint-${{ version }}.tar.gz
   sha256: fdfbccf700e8086c8fd1607ec42e25d4b584512c29af2d9913587a4e448dead4
-  patches:
-    - 2515.patch  # https://github.com/Kozea/WeasyPrint/pull/2515
 
 build:
   number: 0
@@ -33,21 +31,25 @@ requirements:
     - pydyf >=0.11.0
     - cffi >=0.6
     - tinyhtml5 >=2.0.0b1
-    - tinycss2 >=1.4.0
+    - tinycss2 >=1.5.0
     - cssselect2 >=0.8.0
     - pyphen >=0.9.1
     - pillow >=9.1.0
-    - fonttools >=4.0.0
+    - fonttools >=4.59.2
     # OSError: cannot load library 'libpango-1.0-0':
     - pango >=1.44.0
+    #- html5lib >=1.1
+    - glib  # Temporary, see https://github.com/conda-forge/weasyprint-feedstock/issues/23
 
 tests:
   - python:
       imports:
         - weasyprint
+      pip_check: true
   - requirements:
       run:
         - python ${{ python_min }}.*
+        - pip
     script:
       - weasyprint --help
       - pip check
