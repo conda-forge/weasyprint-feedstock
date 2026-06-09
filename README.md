@@ -3,15 +3,15 @@ About weasyprint-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/weasyprint-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/Kozea/WeasyPrint
+Home: https://weasyprint.org/
 
 Package license: BSD-3-Clause
 
-Summary: WeasyPrint converts web documents (HTML with CSS, SVG, etc.) to PDF
+Summary: The Awesome Document Factory, WeasyPrint converts web documents (HTML with CSS, SVG, etc.) to PDF
 
 Development: https://github.com/Kozea/WeasyPrint
 
-Documentation: https://doc.courtbouillon.org/weasyprint/stable/
+Documentation: https://doc.courtbouillon.org/weasyprint/
 
 WeasyPrint is a smart solution helping web developers to create PDF
 documents. It turns simple HTML pages into gorgeous statistical
@@ -21,10 +21,11 @@ Current build status
 ====================
 
 
-<table><tr><td>All platforms:</td>
+<table><tr>
+    <td>All platforms:</td>
     <td>
-      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=7185&branchName=main">
-        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/weasyprint-feedstock?branchName=main">
+      <a href="https://github.com/conda-forge/weasyprint-feedstock/actions/workflows/conda-build.yml">
+        <img src="https://github.com/conda-forge/weasyprint-feedstock/actions/workflows/conda-build.yml/badge.svg?event=push&branch=main">
       </a>
     </td>
   </tr>

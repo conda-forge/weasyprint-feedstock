@@ -6,7 +6,7 @@ conda_build:
   pkg_format: '2'
 bot:
   automerge: true
-  inspection: update-all
+  inspection: update-grayskull
   check_solvable: true
   run_deps_from_wheel: true
 conda_install_tool: pixi
