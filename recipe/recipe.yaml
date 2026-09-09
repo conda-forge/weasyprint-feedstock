@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "69.0"
+  version: '70.0'
 
 package:
   name: weasyprint
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/w/weasyprint/weasyprint-${{ version }}.tar.gz
-  sha256: a7a32f39ca16bd82ef11de99c92ea4b5f14951c9033af035e451ce4f4ee0a88c
+  sha256: c263abf0e86c747b12af678b67f85f4abbfb97d18a20503031e7ba94e4b8cf8c
 
 build:
   number: 0
@@ -35,11 +35,6 @@ requirements:
     - pyphen >=0.9.1
     - pillow >=9.1.0
     - fonttools >=4.59.2
-    # OSError: cannot load library 'libpango-1.0-0':
-    - pango >=1.44.0
-    #- html5lib >=1.1
-    - glib  # Temporary, see https://github.com/conda-forge/weasyprint-feedstock/issues/23
-
 tests:
   - python:
       imports:
@@ -47,7 +42,7 @@ tests:
       pip_check: true
       python_version:
         - ${{ python_min }}.*
-        - "*"
+        - '*'
   - requirements:
       run:
         - python ${{ python_min }}.*
